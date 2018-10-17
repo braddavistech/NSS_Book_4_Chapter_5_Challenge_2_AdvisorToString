@@ -21,3 +21,8 @@ body {
   font-size: 3vw;
   font-weight: bold;
 }
+#sentence{
+  margin: 1.5vw;
+  text-align: center;
+  padding-bottom: 3vw;
+}
