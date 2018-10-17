@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: black;
+}
+#nameBox {
+  background-color: white;
+  width: 70%;
+  margin: 15%;
+}
+#nameBox > div {
+  text-align: center;
+  padding-bottom: 3vw;
+}
+#nameBox > p {
+  margin-left: 5%;
+  text-align: left;
+  color: green;
+  font-size: 3vw;
+  font-weight: bold;
+}
