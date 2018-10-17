@@ -29,7 +29,7 @@ const financialAdvisor = Object.create (null, {
           totalWorth -= this.portfolio[i].quantity * financialAdvisor.portfolio[i].price;
         }
       }
-      return `The total worth of the stocks currently in this portfolio is $${totalWorth.toFixed(2)}.`;
+      return `The total worth of the stocks currently in this portfolio is USD $${totalWorth.toFixed(2)}.`;
     },
     enumerable: false,
   },
@@ -71,6 +71,17 @@ const financialAdvisor = Object.create (null, {
         return `You don't own any shares of ${stockName}.`;
       }
     },
+    enumerable: false
+  },
+  toMyString: {
+    value: function () {
+      let placeHolder = document.getElementById("nameBox");
+      let sentence = document.createElement("h4");
+      sentence.setAttribute("id", "sentence");
+      sentence.innerHTML = `​​​​​${this.name} is an advisor at ${this.company}. ${this.worth()}`
+      placeHolder.appendChild(sentence);
+    },
+    writable: false,
     enumerable: false
   }
 });
@@ -117,3 +128,4 @@ console.log(financialAdvisor);
 console.log(financialAdvisor.worth());
 buildName(financialAdvisor.name, financialAdvisor.company, financialAdvisor.specialty);
 currentStock(financialAdvisor.portfolio);
+financialAdvisor.toMyString();
